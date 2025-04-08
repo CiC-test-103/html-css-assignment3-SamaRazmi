@@ -1,53 +1,267 @@
 /** Variable Imports **/
-@import './variables.css';
+@import "./variables.css";
 
 /**
   CSS Reset
   Source: https://www.joshwcomeau.com/css/custom-css-reset/
 **/
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /* 2. Remove default margin */
 * {
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  body {
+    width: var(--width-mobile);
+    margin: 0 auto;
+  }
+}
 body {
-  /* 3. Add accessible line-height */
+  padding: var(--spacing-page);
+  background-color: var(--clr-stone100) !important;
   line-height: 1.5;
-  /* 4. Improve text rendering */
+  width: var(--width-desktop);
+  margin: 0 auto;
   -webkit-font-smoothing: antialiased;
 }
+.container {
+  background-color: white !important;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 55px;
+  border-radius: 12px;
+  text-align: justify;
+}
+
+.main-image {
+  border-radius: 20px;
+  height: auto;
+}
+.recipe-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 /* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
-/** Your CSS Below **/
-
 /** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.prep-time-box {
+  background-color: var(--clr-rose50);
+  padding: var(--spacing-page);
+  border-radius: var(--border-radius);
+  margin-top: var(--spacing-page);
+  margin-bottom: var(--spacing-page);
+  width: 100%;
+}
+
+.prep-time {
+  font-weight: var(--fw-bold);
+  font-size: var(--font-size-prep-time);
+  margin-bottom: 10px;
+  color: var(--clr-rose800);
+}
+
+.prep-details div {
+  font-size: var(--font-size-detail);
+  margin-bottom: 5px;
+}
+
+.prep-details strong {
+  font-weight: var(--fw-bold);
+}
+
+/* Ingredients Section */
+.ingredients {
+  font-family: var(--fs-base);
+  margin-top: 2rem;
+}
+
+.ingredients strong {
+  font-size: 28px;
+  font-weight: var(--fw-bold);
+  color: var(--clr-brown800);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.ingredients ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.ingredients li {
+  margin-bottom: 0.5rem;
+  color: var(--clr-stone600);
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--clr-brown800);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--clr-stone100);
+  margin: 40px 0;
+  width: 100%;
+}
+
+/* Instructions Section */
+.instructions {
+  font-family: var(--fs-base);
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.Instructions {
+  font-size: 28px;
+  font-weight: var(--fw-bold);
+  color: var(--clr-brown800);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.instructions ol {
+  list-style-type: none;
+  padding-left: 0;
+  color: var(--clr-stone600);
+}
+
+.instructions li {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  color: var(--clr-stone600);
+  width: 100%;
+}
+
+.step-text {
+  display: inline;
+  flex-grow: 1;
+}
+
+.step-text strong {
+  font-weight: bold;
+}
+
+.step-number {
+  font-weight: bold;
+  margin-right: 15px;
+  color: var(--clr-brown800);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--clr-stone100);
+  margin: 40px 0;
+  width: 100%;
+}
+
+/* Nutrition Table */
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapsing borders to only show between rows */
+  margin-top: 1rem;
+}
+
+.nutrition-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+.label {
+  text-align: center;
+  font-weight: bold;
+  color: var(--clr-brown800);
+}
+
+.value {
+  font-weight: normal;
+}
+
+.nutrition-table tr {
+  border-bottom: 1px solid var(--clr-stone100);
+}
+
+.nutrition-table tr:last-child {
+  border-bottom: none;
+}
+
+.nutrition-table td:first-child {
+  padding-left: 20px;
+}
+
+.nutrition-table td:last-child {
+  padding-right: 20px;
+}
+
+/* Attribution section */
+.attribution {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.attribution a {
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}

@@ -7,14 +7,14 @@
 
 /** Fonts Imports **/
 @font-face {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-display: swap;
-  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
 }
 @font-face {
-  font-family: 'Young-Serif';
+  font-family: "Young-Serif";
   font-display: swap;
-  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
 }
 
 /*
@@ -23,7 +23,8 @@
 :root {
   /* Layout */
   --width-mobile: 375px;
-  --width-desktop: 1440;
+  --width-desktop: 1440px;
+  --spacing-page: 2rem;
 
   /* Colours */
   --clr-stone100: hsl(30, 54%, 90%);
@@ -43,6 +44,21 @@
   --fw-black: 700;
 
   /* Fonts */
-  --fs-base: 'Outfit';
-  --fs-accent: 'Young-Serif';
+  --fs-base: "Outfit";
+  --fs-accent: "Young-Serif";
+
+  /* Added Variables */
+  --font-size-prep-time: 18px;
+  --font-size-detail: 16px;
+  --padding-box: 20px;
+  --border-radius: 12px;
+  --font-weight-bold: 600;
+}
+/*--------Nutrition*/
+.Nutrition {
+  font-size: 28px;
+  font-weight: var(--fw-bold);
+  color: var(--clr-brown800);
+  display: block;
+  margin-bottom: 1rem;
 }
